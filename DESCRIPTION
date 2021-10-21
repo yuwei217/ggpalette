@@ -1,4 +1,4 @@
-Package: ccpalette
+Package: ggpalette
 Title: Custom colour palette in ggplot2
 Version: 0.1.0
 Authors@R: 
