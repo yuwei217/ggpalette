@@ -1,5 +1,5 @@
 Package: ccpalette
-Title: What the Package Does (One Line, Title Case)
+Title: Custom colour palette in ggplot2
 Version: 0.1.0
 Authors@R: 
     person(given = "Yuwei",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "yjia0142@student.monash.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Palettes to be used as both a discrete and continuous scale in ggplot2.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
