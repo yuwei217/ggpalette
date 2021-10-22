@@ -1,0 +1,61 @@
+---
+title: "ggpalette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ggpalette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ggpalette)
+library(palmerpenguins)
+library(ggplot2)
+```
+
+## Overview
+In the ggpalette, there are 6 colours in it. They are pink, orange, navy, grey, magenta and green. You can allow ggplot2 to use the colour palette. There are discrete ggplot palettes and continuous colour scale.
+
+
+### Generate discrete ggplot palettes
+ Added with ggplot2 
+```{r warning=FALSE}
+p1 <- ggplot(penguins, aes(bill_length_mm, bill_depth_mm, color = sex)) +
+  geom_point(size = 2) +
+  scale_colour_ggpalette_d() +
+  theme_bw()
+p1
+```
+
+Use direction = -1 to reserve the order of the palette
+```{r warning=FALSE}
+p1 + scale_colour_ggpalette_d(direction = -1)
+```
+
+Used for fill aesthetics in ggplot2
+```{r warning=FALSE}
+p2 <- ggplot(penguins, aes(x = island, fill = species)) +
+  geom_bar(alpha = 0.6) +
+  scale_fill_ggpalette_d() +
+  theme_bw()
+p2
+```
+
+Use direction = -1 to reserve the order of the palette
+
+```{rwarning=FALSE}
+p3 <- ggplot(penguins, aes(x = island, fill = species)) +
+  geom_bar(alpha = 0.6) +
+  scale_fill_ggpalette_d(direction = -1) +
+  theme_bw()
+p3
+```
+
+
